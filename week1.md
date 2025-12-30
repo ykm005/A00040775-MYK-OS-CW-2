@@ -1,4 +1,6 @@
- Q1) System Architecture Diagram <img width="521" height="711" alt="_System Architecture Diagram drawio" src="https://github.com/user-attachments/assets/ad70f9de-f438-4a7f-9b10-8829c0c01666" />
+ Q1) System Architecture Diagram 
+ 
+ <img width="521" height="711" alt="_System Architecture Diagram drawio" src="https://github.com/user-attachments/assets/ad70f9de-f438-4a7f-9b10-8829c0c01666" />
 
 
  Q2) I prefer Ubuntu over mint as it is something I have used during my studies for practical work and I feel that it gives me more control over what I download with the command prompts like sudo, apt in the command interface. Linux mint is very similar to Ubuntu, but it depends on what the user needs to use their desktop for and what they’re willing to ignore. 

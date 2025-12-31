@@ -98,49 +98,34 @@ Network Security
 Q3) Threat Model
 This threat model identifies three realistic security threats relevant to a Linux system and outlines appropriate mitigation strategies for each.
 
-Threat 1 – Brute‑Force SSH Attacks
+Threat 1, Brute-Force SSH Attacks  
 Risk:  
-Attackers attempt repeated login attempts to gain unauthorised access to the system.
+Attackers try multiple login attempts to gain unauthorized access to the system.  
 
-Mitigation Strategies:
+Mitigation Strategies:  
+- Enforce key-based authentication to eliminate password guessing.  
+- Disable root login to prevent targeting of important accounts.  
+- Change the default SSH port to reduce automated scans.  
+- Enable fail2ban to block repeated failed attempts.  
+- Apply SSH rate-limiting through the firewall.  
 
-Enforce key‑based authentication to eliminate password guessing.
-
-Disable root login to prevent high‑value account targeting.
-
-Change the default SSH port to reduce automated scans.
-
-Enable fail2ban to block repeated failed attempts.
-
-Apply SSH rate‑limiting through the firewall.
-
-Threat 2 – Privilege Escalation
+Threat 2, Privilege Escalation  
 Risk:  
-A compromised user account could escalate privileges to gain full system control.
+A compromised user account could gain elevated privileges to take full control of the system.  
 
-Mitigation Strategies:
+Mitigation Strategies:  
+- Apply least-privilege principles to all accounts.  
+- Restrict sudo access to only essential users.  
+- Monitor authentication logs for suspicious sudo activity.  
+- Use AppArmor to limit what applications can access or modify.  
+- Keep software updated to fix privilege-escalation vulnerabilities.  
 
-Apply least‑privilege principles to all accounts.
-
-Restrict sudo access to essential users only.
-
-Monitor authentication logs for suspicious sudo activity.
-
-Use AppArmor to limit what applications can access or modify.
-
-Keep software updated to patch privilege‑escalation vulnerabilities.
-
-Threat 3 – Unpatched Vulnerabilities
+Threat 3, Unpatched Vulnerabilities  
 Risk:  
-Outdated software may contain exploitable security flaws that attackers can target.
+Outdated software may have security flaws that attackers can exploit.  
 
-Mitigation Strategies:
-
-- Enable automatic security updates using unattended-upgrades.
-
-- Regularly review update logs to confirm patches are applied.
-
-- Minimise installed software to reduce the number of potential vulnerabilities.
-
-- Reboot after critical updates to ensure patches take effect.
-
+Mitigation Strategies:  
+- Enable automatic security updates using unattended-upgrades.  
+- Regularly review update logs to ensure patches are applied.  
+- Minimize installed software to reduce potential vulnerabilities.  
+- Reboot after critical updates to ensure patches take effect.  
